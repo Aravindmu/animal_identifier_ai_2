@@ -1,0 +1,10 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload & Identify</button>
+</form>
+<!-- The data is sent to the Django view handling the form.
+
+The view processes and validates the data.
+
+If valid, the image is saved to the model (UploadedImage) in the database. -->
